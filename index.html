@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deus Ex Ultima | Official</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section class="hero-section">
+        <div class="hero-container">
+            <img src="my-photo.jpg" alt="Background" class="hero-image">
+            <div class="overlay"></div>
+        </div>
+        
+        <header class="header-main">
+            <img src="logo.png" alt="DXU Logo" class="main-logo">
+            <nav class="main-nav">
+                <div class="nav-links">
+                    <a href="#">HOME</a>
+                    <a href="#">MUSIC</a>
+                    <a href="#">MERCH</a>
+                    <a href="#">ABOUT</a>
+                </div>
+                <div class="admin-nav-group">
+                    <button id="admin-login-btn" class="admin-trigger">ADMIN</button>
+                    <div id="admin-tools" class="hidden">
+                        <button id="nav-upload-btn" class="tool-btn">UPLOAD</button>
+                        <button id="nav-arrange-btn" class="tool-btn">ARRANGE</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="scroll-indicator">
+            <div class="arrow-down"></div>
+        </div>
+    </section>
+
+    <main id="updates-feed">
+        <h2 class="section-title">LATEST UPDATES</h2>
+        <div id="feed-grid">
+            </div>
+    </main>
+
+    <div id="login-modal" class="modal hidden">
+        <div class="modal-box">
+            <button id="login-close" class="close-x">×</button>
+            <h3 class="brand-font">ADMIN ACCESS</h3>
+            <input type="password" id="admin-pass-input" placeholder="Enter Password">
+            <button id="login-confirm">ENTER</button>
+        </div>
+    </div>
+
+    <div id="admin-panel" class="modal hidden">
+        <div class="admin-menu-box">
+            <button id="admin-close" class="close-x">×</button>
+            <h2 class="brand-font">NEW UPDATE</h2>
+            <div class="admin-inputs">
+                <input type="text" id="post-title" placeholder="Post Title">
+                <textarea id="post-text" placeholder="Post Description..."></textarea>
+                <div class="file-grid">
+                    <div class="file-input">
+                        <label>AUDIO</label>
+                        <input type="file" id="post-audio" accept="audio/*">
+                    </div>
+                    <div class="file-input">
+                        <label>IMAGE</label>
+                        <input type="file" id="post-image" accept="image/*">
+                    </div>
+                </div>
+            </div>
+            <div class="admin-actions">
+                <button id="submit-post">GENERATE POST</button>
+                <div class="snippet-container">
+                    <h3 class="brand-font" style="font-size:0.8rem;">PERMANENT DATA SNIPPET</h3>
+                    <textarea id="copy-area" readonly placeholder="Snippet will appear here..."></textarea>
+                    <button id="copy-btn">COPY CODE</button>
+                </div>
+                <button id="logout-btn" class="logout-red">LOGOUT</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
